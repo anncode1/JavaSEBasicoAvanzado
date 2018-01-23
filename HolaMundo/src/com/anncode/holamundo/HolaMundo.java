@@ -1,5 +1,5 @@
 package com.anncode.holamundo;
-
+//Upper Camel Case nombre de clase
 public class HolaMundo {
 
 	public static void main(String[] args) {
@@ -24,8 +24,24 @@ public class HolaMundo {
 		boolean isVisible = true;
 		boolean funciona = false;
 		
+		int variable = 2;
+		int _variable = 3;
+		int $variable = 4;
+		int variable1 = 5;
 		
 		
+		//Constantes
+		int VALOR = 0;
+		int VALOR_MAXIMO = 1;
+		
+		
+		
+		//Lower Camel Case
+		int minValor = 4;
+		
+
+		
+		System.out.println(variable);
 	}
 
 }
