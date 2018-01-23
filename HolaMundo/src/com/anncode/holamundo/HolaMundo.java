@@ -39,9 +39,22 @@ public class HolaMundo {
 		//Lower Camel Case
 		int minValor = 4;
 		
-
+		byte b = 6;
+		short s = b;
 		
-		System.out.println(variable);
+		b = (byte) s;
+		
+		int i = 1;
+		double d = 2.8;
+		i= (int) d;
+		
+		int codigo = 97;
+		char codigoASCII = (char) codigo;
+		
+		short numero = 300;
+		byte numeroByte = (byte) numero;
+		
+		System.out.println(numeroByte);
 	}
 
 }
