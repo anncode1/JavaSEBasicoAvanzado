@@ -80,25 +80,25 @@ public class HolaMundo {
 		
 		char[][][][] monkey = new char[2][3][2][2];
 		monkey[1][0][0][1] = 'm';
-		System.out.println(monkey[1][0][0][1]);
+		//System.out.println(monkey[1][0][0][1]);
 		
 		
 		//Operadores Aritméticos
 		int a = 1;
 		int aa = a + a;
-		System.out.println("el valor de  aa: " + aa);
+		//System.out.println("el valor de  aa: " + aa);
 		
 		double x = 2.56;
 		int y = 9;
 		float w = (float)x + y;
-		System.out.println(w);
+		//System.out.println(w);
 		
-		System.out.println(w*2);
+		//System.out.println(w*2);
 		
 		double k = 4/0.00002;
-		System.out.println(k);
+		//System.out.println(k);
 		
-		System.out.println(7%2);
+		//System.out.println(7%2);
 		
 		
 		double f = 2;
@@ -109,9 +109,36 @@ public class HolaMundo {
 		//f -*= g;
 		//f /= g;
 		f %= g;
-		System.out.println(f);
+		//System.out.println(f);
 		
-		//System.out.println(numeroByte);
+		
+		int l = 3;
+		
+		
+		//++l;
+		//l++;
+		//System.out.println(l);
+		
+		//++l
+		//1. Incrementar el valor l+1
+		//2. Asignar el valor a l 
+		//System.out.println(++l);
+		
+		//l++
+		//1. Asignar el valor a l   l=l
+		//2. Incrementar el valor l+1
+		//System.out.println(l++);
+		//System.out.println(l);//4
+		
+		
+		//Operadores equidad
+		
+		int q = 5;
+		int p = 4;
+		System.out.println(q == p);
+		System.out.println(q != p);
+		
+		
 	}
 
 }
