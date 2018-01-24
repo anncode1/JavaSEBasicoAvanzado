@@ -68,9 +68,21 @@ public class HolaMundo {
 		
 		char[][][] letters = { { {'a','b'}, {'a','b'},{'a','b'} }, { {'a','b'}, {'a','b'}, {'a','b'} } };
 		
+		char[] names = new char[4];
+		names[0] = 'h';
+		names[1] = 'o';
+		names[2] = 'l';
+		names[3] = 'a';
+		System.out.println(names[0]);
+		System.out.println(names[1]);
+		System.out.println(names[2]);
+		System.out.println(names[3]);
 		
+		char[][][][] monkey = new char[2][3][2][2];
+		monkey[1][0][0][1] = 'm';
+		System.out.println(monkey[1][0][0][1]);
 		
-		System.out.println(numeroByte);
+		//System.out.println(numeroByte);
 	}
 
 }
