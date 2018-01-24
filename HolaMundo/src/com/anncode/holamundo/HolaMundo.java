@@ -216,6 +216,17 @@ public class HolaMundo {
 		}
 		
 		
+		//Bucle While
+		int e = 1;
+		while (e <= 5) {
+			System.out.println("e es menor o igual que 5");
+			e++;
+		}
+		
+		System.out.println("Continuamos con el flujo");
+		
+		
+		
 	}
 
 }
