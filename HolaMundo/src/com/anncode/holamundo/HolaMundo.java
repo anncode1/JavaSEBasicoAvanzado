@@ -223,6 +223,18 @@ public class HolaMundo {
 			e++;
 		}
 		
+		
+		System.out.println();
+		int[] numeros = new int[5];
+		for(int c = 0; c < 5; c++) {
+			numeros[c] = c;
+			System.out.println("numeros["+c+"]: " + numeros[c]);
+		}
+		
+		for (int j : numeros) {
+			System.out.println(j);
+		}
+		
 		System.out.println("Continuamos con el flujo");
 		
 		
