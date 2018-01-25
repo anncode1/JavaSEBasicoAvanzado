@@ -17,6 +17,11 @@ public class Main {
 			System.out.println("4. Magazines");
 			System.out.println("0. Exit");
 			
+			//Leer la respuesta del usuario
+			
+			
+			
+			
 		}while(exit != 0);
 		
 		
