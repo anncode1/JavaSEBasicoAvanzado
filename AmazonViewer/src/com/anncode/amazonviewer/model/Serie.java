@@ -1,26 +1,22 @@
 package com.anncode.amazonviewer.model;
 
-public class Serie {
+public class Serie extends Film {
 	
 	private int id;
-	private String title;
-	private String genre;
-	private String creator;
-	private int duration;
-	private short year;
-	private boolean viewed;
-	private int timeViewed;
-	
-	public Serie(String title, String genre, int duration) {
-		super();
-		this.title = title;
-		this.genre = genre;
-		this.duration = duration;
-	}
-	
-	//chapters[]
-	
-	
+	private int sessionQuantity;
+	private Chapter[] chapter;
 	
 
+	public Serie(String title, String genre, String creator, int duration, int sessionQuantity) {
+		super(title, genre, creator, duration);
+		// TODO Auto-generated constructor stub
+		this.sessionQuantity = sessionQuantity;
+		
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	
 }
