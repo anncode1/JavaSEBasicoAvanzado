@@ -53,8 +53,8 @@ public class Movie extends Film implements IVisualizable {
 	public void stopToSee(Date dateI, Date dateF) {
 		// TODO Auto-generated method stub
 		
-		if (dateF.getSeconds() > dateI.getSeconds()) {
-			setTimeViewed(dateF.getSeconds() - dateI.getSeconds());
+		if (dateF.getTime() > dateI.getTime()) {
+			setTimeViewed((int)(dateF.getTime() - dateI.getTime()));
 		}else {
 			setTimeViewed(0);
 		}
