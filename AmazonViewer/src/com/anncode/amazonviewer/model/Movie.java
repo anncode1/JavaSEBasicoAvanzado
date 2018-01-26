@@ -20,6 +20,8 @@ public class Movie extends Film {
 	public int getId() {
 		return id;
 	}
+	
+	
 	public int getTimeViewed() {
 		return timeViewed;
 	}
@@ -27,4 +29,22 @@ public class Movie extends Film {
 		this.timeViewed = timeViewed;
 	}
 	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return  "\n :: MOVIE ::" + 
+				"\n Title: " + getTitle() +
+				"\n Genero: " + getGenre() + 
+				"\n Year: " + getYear() + 
+				"\n Creator: " + getCreator() +
+				"\n Duration: " + getDuration();
+	}
+	
 }
+
+
+
+
+
+
+
