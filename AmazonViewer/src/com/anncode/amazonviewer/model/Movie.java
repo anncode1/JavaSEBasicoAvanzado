@@ -14,11 +14,6 @@ public class Movie extends Film implements IVisualizable {
 		setYear(year);
 	}
 
-	public void showData() {
-		//System.out.println("Title:" + title);
-		//System.out.println("Genre:" + genre);
-		//System.out.println("Year:" + year);
-	}
 	
 	public int getId() {
 		return id;
