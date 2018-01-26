@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
 
+import com.anncode.amazonviewer.model.Chapter;
 import com.anncode.amazonviewer.model.Movie;
+import com.anncode.amazonviewer.model.Serie;
 
 public class Main {
 
@@ -113,20 +115,70 @@ public class Main {
 	}
 	
 	public static void showSeries() {
-		int exit = 0;
+		int exit = 1;
+		ArrayList<Serie> series = Serie.makeSeriesList();
 		do {
 			System.out.println();
 			System.out.println(":: SERIES ::");
 			System.out.println();
+			
+			for (int i = 0; i < series.size(); i++) { //1. Serie 1
+				System.out.println(i+1 + ". " + series.get(i).getTitle() + " Visto: " + series.get(i).isViewed());
+			}
+			
+			System.out.println("0. Regresar al Menu");
+			System.out.println();
+			
+			//Leer Respuesta usuario
+			Scanner sc = new Scanner(System.in);
+			int response = Integer.valueOf(sc.nextLine());
+			
+			if(response == 0) {
+				showMenu();
+			}
+			
+			showChapters(series.get(response-1).getChapters());
+			
 		}while(exit !=0);
 	}
 	
-	public static void showChapters() {
+	public static void showChapters(ArrayList<Chapter> chaptersOfSerieSelected) {
 		int exit = 0;
+		
 		do {
 			System.out.println();
 			System.out.println(":: CHAPTERS ::");
 			System.out.println();
+			
+			
+			for (int i = 0; i < chaptersOfSerieSelected.size(); i++) { //1. Chapter 1
+				System.out.println(i+1 + ". " + chaptersOfSerieSelected.get(i).getTitle() + " Visto: " + chaptersOfSerieSelected.get(i).isViewed());
+			}
+			
+			System.out.println("0. Regresar al Menu");
+			System.out.println();
+			
+			//Leer Respuesta usuario
+			Scanner sc = new Scanner(System.in);
+			int response = Integer.valueOf(sc.nextLine());
+			
+			if(response == 0) {
+				showSeries();
+			}
+			
+			Chapter chapterSelected = chaptersOfSerieSelected.get(response-1);
+			chapterSelected.setViewed(true);
+			Date dateI = chapterSelected.startToSee(new Date());
+			
+			for (int i = 0; i < 100000; i++) {
+				System.out.println("..........");
+			}
+			
+			//Termine de verla
+			chapterSelected.stopToSee(dateI, new Date());
+			System.out.println();
+			System.out.println("Viste: " + chapterSelected);
+			System.out.println("Por: " + chapterSelected.getTimeViewed() + " milisegundos");
 		}while(exit !=0);
 	}
 	
