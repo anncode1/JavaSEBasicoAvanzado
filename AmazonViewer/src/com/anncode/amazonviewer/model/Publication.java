@@ -10,7 +10,6 @@ public class Publication {
 	private String[] authors;
 	
 	
-	
 	public Publication(String title, Date edititionDate, String editorial) {
 		super();
 		this.title = title;

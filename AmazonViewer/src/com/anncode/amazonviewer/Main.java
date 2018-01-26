@@ -9,6 +9,13 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Movie movie = new Movie("Coco", "Animation", "", 120, (short)2017);
+		Movie movie2 = new Movie("Coco", "Animation", "", 120, (short)2017);
+		
+		if (movie.equals(movie)) {
+			System.out.println(true);
+		} else {
+			System.out.println(false);
+		}
 		System.out.println(movie);
 		
 		//showMenu();
