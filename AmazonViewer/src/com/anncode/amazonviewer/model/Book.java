@@ -47,6 +47,10 @@ public class Book extends Publication implements IVisualizable {
 	public void setReaded(boolean readed) {
 		this.readed = readed;
 	}
+	
+	public boolean getIsReaded() {
+		return readed;
+	}
 
 
 	public int getTimeReaded() {

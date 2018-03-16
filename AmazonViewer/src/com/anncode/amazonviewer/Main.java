@@ -281,21 +281,44 @@ public class Main {
 				
 			}
 		}
+		
+		for (Serie serie : series) {
+			ArrayList<Chapter> chapters = serie.getChapters();
+			for (Chapter chapter : chapters) {
+				if (chapter.getIsViewed()) {
+					contentReport += chapter.toString() + "\n";
+					
+				}
+			}	
+		}
+		
+		
+		for (Book book : books) {
+			if (book.getIsReaded()) {
+				contentReport += book.toString() + "\n";
+				
+			}
+		}
 
 		report.setContent(contentReport);
 		report.makeReport();
-		
+		System.out.println("Reporte Generado");
+		System.out.println();
 	}
 	
 	public static void makeReport(Date date) {
-		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd-h-m-s-S");
 		String dateString = df.format(date);
 		Report report = new Report();
 		
 		report.setNameFile("reporte" + dateString);
 		report.setExtension("txt");
 		report.setTitle(":: VISTOS ::");
-		String contentReport = "";
+		
+		
+		SimpleDateFormat dfNameDays = new SimpleDateFormat("E, W MMM Y");
+		dateString = dfNameDays.format(date);
+		String contentReport = "Date: " + dateString + "\n\n\n";
 		
 		for (Movie movie : movies) {
 			if (movie.getIsViewed()) {
@@ -303,8 +326,28 @@ public class Main {
 				
 			}
 		}
+		
+		for (Serie serie : series) {
+			ArrayList<Chapter> chapters = serie.getChapters();
+			for (Chapter chapter : chapters) {
+				if (chapter.getIsViewed()) {
+					contentReport += chapter.toString() + "\n";
+					
+				}
+			}
+		}
+		
+		for (Book book : books) {
+			if (book.getIsReaded()) {
+				contentReport += book.toString() + "\n";
+				
+			}
+		}
 		report.setContent(contentReport);
 		report.makeReport();
+		
+		System.out.println("Reporte Generado");
+		System.out.println();
 	}
 	
 }
