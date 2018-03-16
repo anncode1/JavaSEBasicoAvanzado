@@ -30,7 +30,7 @@ public class AmazonUtil {
 			}
 			response = sc.nextInt();
 		}
-		System.out.println("Tu Respuesta fue: " + response);
+		System.out.println("Tu Respuesta fue: " + response + "\n");
 		return response;
 	}
 

@@ -32,7 +32,7 @@ public class Book extends Publication implements IVisualizable {
 	}
 
 
-	public boolean isReaded() {
+	public String isReaded() {
 		String leido = "";
 		if(readed == true) {
 			leido = "Sí";
@@ -40,7 +40,7 @@ public class Book extends Publication implements IVisualizable {
 			leido = "No";
 		}
 		
-		return readed;
+		return leido;
 	}
 
 
@@ -67,7 +67,7 @@ public class Book extends Publication implements IVisualizable {
 							"\n Edition Date: " + getEdititionDate() +
 							"\n Authors: ";
 		for (int i = 0; i < getAuthors().length; i++) {
-			detailBook += "\t" + getAuthors()[i];
+			detailBook += "\t" + getAuthors()[i] + " ";
 		}
 		return  detailBook;
 	}
@@ -83,8 +83,8 @@ public class Book extends Publication implements IVisualizable {
 	@Override
 	public void stopToSee(Date dateI, Date dateF) {
 		// TODO Auto-generated method stub
-		if (dateF.getSeconds() > dateI.getSeconds()) {
-			setTimeReaded(dateF.getSeconds() - dateI.getSeconds());
+		if (dateF.getTime() > dateI.getTime()) {
+			setTimeReaded((int)(dateF.getTime() - dateI.getTime()));
 		}else {
 			setTimeReaded(0);
 		}
