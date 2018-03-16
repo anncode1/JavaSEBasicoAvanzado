@@ -107,7 +107,7 @@ public class Main {
 				movieSelected.setViewed(true);
 				Date dateI = movieSelected.startToSee(new Date());
 				
-				for (int i = 0; i < 100; i++) {
+				for (int i = 0; i < 100000; i++) {
 					System.out.println("..........");
 				}
 				
@@ -183,7 +183,7 @@ public class Main {
 				chapterSelected.setViewed(true);
 				Date dateI = chapterSelected.startToSee(new Date());
 				
-				for (int i = 0; i < 100; i++) {
+				for (int i = 0; i < 100000; i++) {
 					System.out.println("..........");
 				}
 				
