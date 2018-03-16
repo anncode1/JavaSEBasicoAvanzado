@@ -49,8 +49,6 @@ public class Main {
 					break;
 				case 2:
 					showSeries();
-					exit = 0;
-					response = 0;
 					break;
 				case 3:
 					showBooks();
