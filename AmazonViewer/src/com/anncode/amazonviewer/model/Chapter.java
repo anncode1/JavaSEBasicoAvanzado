@@ -61,4 +61,18 @@ public class Chapter extends Movie {
 		
 		return chapters;
 	}
+	
+	@Override
+	public void view() {
+		// TODO Auto-generated method stub
+
+	}
+	
 }
+
+
+
+
+
+
+

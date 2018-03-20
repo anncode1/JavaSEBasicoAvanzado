@@ -94,6 +94,7 @@ public class Book extends Publication implements IVisualizable {
 		}
 	}
 	
+	
 	public static ArrayList<Book> makeBookList() {
 		ArrayList<Book> books = new ArrayList();
 		String[] authors = new String[3];

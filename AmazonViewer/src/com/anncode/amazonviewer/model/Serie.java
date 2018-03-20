@@ -2,7 +2,7 @@ package com.anncode.amazonviewer.model;
 
 import java.util.ArrayList;
 
-public class Serie extends Film {
+public class Serie extends Film  {
 	
 	private int id;
 	private int sessionQuantity;
@@ -59,6 +59,14 @@ public class Serie extends Film {
 		}
 		
 		return series;
+	}
+
+
+
+	@Override
+	public void view() {
+		// TODO Auto-generated method stub
+		
 	}
 	
 }
