@@ -10,6 +10,7 @@ public class Book extends Publication implements IVisualizable {
 	private int timeReaded;
 	
 	
+	
 	public Book(String title, Date edititionDate, String editorial, String[] authors) {
 		super(title, edititionDate, editorial);
 		// TODO Auto-generated constructor stub
@@ -122,4 +123,51 @@ public class Book extends Publication implements IVisualizable {
 		return books;
 	}
 	
+	
+	public static class Page {
+		private int id;
+		private int number;
+		private String content;
+	
+		public Page(int number, String content) {
+			super();
+			this.number = number;
+			this.content = content;
+		}
+		public int getId() {
+			return id;
+		}
+		public void setId(int id) {
+			this.id = id;
+		}
+		public int getNumber() {
+			return number;
+		}
+		public void setNumber(int number) {
+			this.number = number;
+		}
+		public String getContent() {
+			return content;
+		}
+		public void setContent(String content) {
+			this.content = content;
+		}
+		
+		
+		
+		
+	}
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+
