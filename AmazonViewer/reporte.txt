@@ -1,0 +1,21 @@
+
+ :: MOVIE ::
+ Title: Coco
+ Genero: Animación
+ Year: 2017
+ Creator: Pixart
+ Duration: 120
+
+ :: MOVIE ::
+ Title: Titanic
+ Genero: Drama
+ Year: 1997
+ Creator: James Cameron
+ Duration: 195
+
+ :: MOVIE ::
+ Title: Amélie
+ Genero: Romance
+ Year: 2001
+ Creator: Jean-Pierre Jeunet
+ Duration: 123

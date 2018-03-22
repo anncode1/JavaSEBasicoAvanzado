@@ -94,8 +94,9 @@ public class Main {
 		}while(exit != 0);
 	}
 	
-	static ArrayList<Movie> movies = Movie.makeMoviesList();
+	static ArrayList<Movie> movies = new ArrayList();
 	public static void showMovies() {
+		movies = Movie.makeMoviesList();
 		int exit = 1;
 		
 		do {

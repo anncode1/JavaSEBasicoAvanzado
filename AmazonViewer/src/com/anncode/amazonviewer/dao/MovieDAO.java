@@ -14,6 +14,20 @@ import com.anncode.amazonviewer.model.Movie;
 public interface MovieDAO extends IDBConnection {
 	
 	default Movie setMovieViewed(Movie movie) {
+		try(Connection connection = connectToDB()){
+			Statement statement = connection.createStatement();
+			String query = "INSERT INTO " + TVIEWED + 
+					" ("+TVIEWED_IDMATERIAL+", "+TVIEWED_IDELEMENT+", "+TVIEWED_IDUSUARIO+")" +
+					 " VALUES("+ID_TMATERIALS [0]+", "+movie.getId()+", "+TUSER_IDUSUARIO+")";
+			if (statement.executeUpdate(query) > 0) {
+				System.out.println("Se marcó en Visto");
+			}
+			
+			
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}
+		
 		return movie;
 	} 
 	
