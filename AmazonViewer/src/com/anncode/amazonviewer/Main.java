@@ -272,11 +272,9 @@ public class Main {
 		report.setTitle(":: VISTOS ::");
 		String contentReport = "";
 		
-		movies.stream()
-		.filter(m -> m.getIsViewed())
-		.forEach(m -> contentReport.concat(m.toString()));
 		
-		/*for (Movie movie : movies) {
+		
+		for (Movie movie : movies) {
 			if (movie.getIsViewed()) {
 				contentReport += movie.toString() + "\n";
 				
@@ -299,7 +297,7 @@ public class Main {
 				contentReport += book.toString() + "\n";
 				
 			}
-		}*/
+		}
 
 		report.setContent(contentReport);
 		report.makeReport();
