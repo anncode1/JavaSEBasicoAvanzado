@@ -60,5 +60,13 @@ public class Serie extends Film {
 		
 		return series;
 	}
+
+
+
+	@Override
+	public void view() {
+		// TODO Auto-generated method stub
+		
+	}
 	
 }
